@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: multi-agent-qna-api
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./rag_docs:/app/rag_docs
+    env_file:
+      - .env
+    restart: unless-stopped
