@@ -17,7 +17,6 @@ RUN poetry install --no-root --no-interaction --with dev
 # Copy application code and test files
 COPY ./src ./src
 COPY ./rag_docs ./rag_docs
-COPY ./tests ./tests
 
 EXPOSE 5000
 
